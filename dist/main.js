@@ -52,6 +52,99 @@ function createAboutPage() {
 
 module.exports = __webpack_require__.p + "e991bb030481ba56f69c.jpg";
 
+/***/ }),
+/* 3 */
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+const container = document.querySelector('#content');
+
+function populateContainer() {
+  while (container.firstChild) {
+    container.removeChild(container.firstChild);
+  }
+
+  const menuPage = createMenuPage();
+  container.appendChild(menuPage);
+}
+
+function createMenuPage() {
+  const menu = document.createElement('main');
+  const header = document.createElement('h1');
+  const itemList = makeItemList();
+
+  menu.classList.add('menu-container');
+  header.textContent = "Menu";
+
+  [header, itemList].forEach(elem => menu.appendChild(elem));
+
+  return menu;
+}
+
+function makeItemList() {
+  const list = document.createElement('ul');
+  const items = [
+    makeItem('content'),
+    makeItem('content'),
+    makeItem('content'),
+    makeItem('content'),
+    makeItem('content'),
+  ];
+
+  items.forEach(item => list.appendChild(item));
+  return list;
+}
+
+function makeItem(content) {
+  const item = document.createElement('li');
+  item.textContent = content;
+  return item;
+}
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (populateContainer);
+
+/***/ }),
+/* 4 */
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+const container = document.querySelector('#content');
+
+function populateContainer() {
+  while (container.firstChild) {
+    container.removeChild(container.firstChild);
+  }
+
+  const contactPage = createContactPage();
+  container.appendChild(contactPage);
+}
+
+function createContactPage() {
+  const contact = document.createElement('main');
+  const header = document.createElement('h1');
+  const para1 = document.createElement('p');
+  const para2 = document.createElement('p');
+
+  contact.classList.add('contact-container');
+  header.textContent = "Contact Info";
+  para1.textContent =
+    '';
+  para2.textContent = 
+    'Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque quisquam nobis possimus itaque recusandae maxime quis impedit odio vel! Temporibus aliquam id laudantium amet. Eaque quas sit omnis hic saepe. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque possimus quo quis consequatur nesciunt incidunt illum facere quos optio a ipsum eius harum deleniti sit, nisi provident non explicabo temporibus.';
+
+  [header, para1, para2].forEach(elem => contact.appendChild(elem));
+
+  return contact;
+}
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (populateContainer);
+
 /***/ })
 /******/ 	]);
 /************************************************************************/
@@ -149,8 +242,8 @@ var __webpack_exports__ = {};
 (() => {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _about_about_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(1);
-Object(function webpackMissingModule() { var e = new Error("Cannot find module './menu/menu.js'"); e.code = 'MODULE_NOT_FOUND'; throw e; }());
-Object(function webpackMissingModule() { var e = new Error("Cannot find module './contact/contact.js'"); e.code = 'MODULE_NOT_FOUND'; throw e; }());
+/* harmony import */ var _menu_menu_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(3);
+/* harmony import */ var _contact_contact_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(4);
 
 
 
@@ -161,8 +254,8 @@ const contactBtn = document.querySelector('.contact');
 
 (0,_about_about_js__WEBPACK_IMPORTED_MODULE_0__["default"])();
 aboutBtn.addEventListener("click", _about_about_js__WEBPACK_IMPORTED_MODULE_0__["default"]);
-menuBtn.addEventListener("click", Object(function webpackMissingModule() { var e = new Error("Cannot find module './menu/menu.js'"); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
-contactBtn.addEventListener("click", Object(function webpackMissingModule() { var e = new Error("Cannot find module './contact/contact.js'"); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
+menuBtn.addEventListener("click", _menu_menu_js__WEBPACK_IMPORTED_MODULE_1__["default"]);
+contactBtn.addEventListener("click", _contact_contact_js__WEBPACK_IMPORTED_MODULE_2__["default"]);
 
 })();
 
