@@ -148,10 +148,22 @@ var __webpack_exports__ = {};
 // This entry need to be wrapped in an IIFE because it need to be isolated against other modules in the chunk.
 (() => {
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _about__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(1);
+/* harmony import */ var _about_about_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(1);
+Object(function webpackMissingModule() { var e = new Error("Cannot find module './menu/menu.js'"); e.code = 'MODULE_NOT_FOUND'; throw e; }());
+Object(function webpackMissingModule() { var e = new Error("Cannot find module './contact/contact.js'"); e.code = 'MODULE_NOT_FOUND'; throw e; }());
 
 
-(0,_about__WEBPACK_IMPORTED_MODULE_0__["default"])();
+
+
+const aboutBtn = document.querySelector('.about');
+const menuBtn = document.querySelector('.menu');
+const contactBtn = document.querySelector('.contact');
+
+(0,_about_about_js__WEBPACK_IMPORTED_MODULE_0__["default"])();
+aboutBtn.addEventListener("click", _about_about_js__WEBPACK_IMPORTED_MODULE_0__["default"]);
+menuBtn.addEventListener("click", Object(function webpackMissingModule() { var e = new Error("Cannot find module './menu/menu.js'"); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
+contactBtn.addEventListener("click", Object(function webpackMissingModule() { var e = new Error("Cannot find module './contact/contact.js'"); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
+
 })();
 
 /******/ })()
